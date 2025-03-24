@@ -5,7 +5,7 @@
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-  <title>Components / Breadcrumbs - NiceAdmin Bootstrap Template</title>
+  <title>Components / Alerts - NiceAdmin Bootstrap Template</title>
   <meta content="" name="description">
   <meta content="" name="keywords">
 
@@ -41,285 +41,286 @@
 <body>
 
   <!-- ======= Header ======= -->
-  <header id="header" class="header fixed-top d-flex align-items-center">
+<!-- ======= Header ======= -->
+<header id="header" class="header fixed-top d-flex align-items-center">
 
-    <div class="d-flex align-items-center justify-content-between">
-      <a href="index.html" class="logo d-flex align-items-center">
-        <img src="assets/img/breadlogo.png" alt="">
-        <span class="d-none d-lg-block">GoBread</span>
+  <div class="d-flex align-items-center justify-content-between">
+    <a href="index.html" class="logo d-flex align-items-center">
+      <img src="assets/img/breadlogo.png" alt="">
+      <span class="d-none d-lg-block">GoBread</span>
+    </a>
+    <i class="bi bi-list toggle-sidebar-btn"></i>
+  </div><!-- End Logo -->
+
+  <div class="search-bar">
+    <form class="search-form d-flex align-items-center" method="POST" action="#">
+      <input type="text" name="query" placeholder="Search" title="Enter search keyword">
+      <button type="submit" title="Search"><i class="bi bi-search"></i></button>
+    </form>
+  </div><!-- End Search Bar -->
+
+  <nav class="header-nav ms-auto">
+    <ul class="d-flex align-items-center">
+
+      <li class="nav-item d-block d-lg-none">
+        <a class="nav-link nav-icon search-bar-toggle " href="#">
+          <i class="bi bi-search"></i>
+        </a>
+      </li><!-- End Search Icon-->
+
+      <div class="branch-selector">
+        <label for="branch">Chọn cơ sở:</label>
+        <select id="branch">
+            <option value="hanoi">Cơ sở Hà Nội</option>
+            <option value="hcm">Cơ sở TP. Hồ Chí Minh</option>
+            <option value="danang">Cơ sở Đà Nẵng</option>
+        </select>
+    </div>
+
+      <li class="nav-item dropdown">
+
+        <a class="nav-link nav-icon" href="#" data-bs-toggle="dropdown">
+          <i class="bi bi-bell"></i>
+          <span class="badge bg-primary badge-number">4</span>
+        </a><!-- End Notification Icon -->
+
+        <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow notifications">
+          <li class="dropdown-header">
+            Bạn có 4 thông báo mới
+            <a href="#"><span class="badge rounded-pill bg-primary p-2 ms-2">Xem tất cả</span></a>
+          </li>
+          <li>
+            <hr class="dropdown-divider">
+          </li>
+
+          <li class="notification-item">
+            <i class="bi bi-exclamation-circle text-warning"></i>
+            <div>
+              <h4>Cảnh báo đăng nhập</h4>
+              <p>Phát hiện tài khoản đăng nhập ở nơi khác</p>
+              <p>2 phút trước</p>
+            </div>
+          </li>
+
+          <li>
+            <hr class="dropdown-divider">
+          </li>
+
+          <li class="notification-item">
+            <i class="bi bi-x-circle text-danger"></i>
+            <div>
+              <h4>Đặt hàng không thành công</h4>
+              <p>Vui lòng điền đầy đủ thông tin đơn hàng</p>
+              <p>1 hr. ago</p>
+            </div>
+          </li>
+
+          <li>
+            <hr class="dropdown-divider">
+          </li>
+
+          <li class="notification-item">
+            <i class="bi bi-check-circle text-success"></i>
+            <div>
+              <h4>Thông báo 3</h4>
+              <p>Nội dung thông báo 3</p>
+              <p>2 hrs. ago</p>
+            </div>
+          </li>
+
+          <li>
+            <hr class="dropdown-divider">
+          </li>
+
+          <li class="notification-item">
+            <i class="bi bi-info-circle text-primary"></i>
+            <div>
+              <h4>Thông báo 4 </h4>
+              <p>Nội dung thông báo 4</p>
+              <p>4 hrs. ago</p>
+            </div>
+          </li>
+
+          <li>
+            <hr class="dropdown-divider">
+          </li>
+          <li class="dropdown-footer">
+            <a href="#">Hiển thị tất cả thông báo</a>
+          </li>
+
+        </ul><!-- End Notification Dropdown Items -->
+
+      </li><!-- End Notification Nav -->
+
+      <li class="nav-item dropdown">
+
+        <a class="nav-link nav-icon" href="#" data-bs-toggle="dropdown">
+          <i class="bi bi-chat-left-text"></i>
+          <span class="badge bg-success badge-number">3</span>
+        </a><!-- End Messages Icon -->
+
+        <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow messages">
+          <li class="dropdown-header">
+            Bạn có 3 tin nhắn mới
+            <a href="#"><span class="badge rounded-pill bg-primary p-2 ms-2">Xem tất cả</span></a>
+          </li>
+          <li>
+            <hr class="dropdown-divider">
+          </li>
+
+          <li class="message-item">
+            <a href="#">
+              <img src="assets/img/user1.png" alt="" class="rounded-circle">
+              <div>
+                <h4>Vũ Tùng Dương</h4>
+                <p>Thêm đơn hàng #2024245676</p>
+                <p>Vừa xong</p>
+              </div>
+            </a>
+          </li>
+          <li>
+            <hr class="dropdown-divider">
+          </li>
+
+          <li class="message-item">
+            <a href="#">
+              <img src="assets/img/user2.jpg" alt="" class="rounded-circle">
+              <div>
+                <h4>Trần Quốc Toàn</h4>
+                <p>Thêm đơn hàng #202423445</p>
+                <p>6 phút trước</p>
+              </div>
+            </a>
+          </li>
+          <li>
+            <hr class="dropdown-divider">
+          </li>
+
+          <li class="message-item">
+            <a href="#">
+              <img src="assets/img/user3.jpg" alt="" class="rounded-circle">
+              <div>
+                <h4>Lê Võ Khôi Nguyên</h4>
+                <p>Thêm đơn hàng #202423346</p>
+                <p>8 phút trước</p>
+              </div>
+            </a>
+          </li>
+          <li>
+            <hr class="dropdown-divider">
+          </li>
+
+          <li class="dropdown-footer">
+            <a href="#">Hiển thị tất cả tin nhắn</a>
+          </li>
+
+        </ul><!-- End Messages Dropdown Items -->
+
+      </li><!-- End Messages Nav -->
+
+      <li class="nav-item dropdown pe-3">
+
+        <a class="nav-link nav-profile d-flex align-items-center pe-0" href="#" data-bs-toggle="dropdown">
+          <img src="assets/img/user1.png" alt="Profile" class="rounded-circle">
+          <span class="d-none d-md-block dropdown-toggle ps-2">Admin</span>
+        </a><!-- End Profile Image Icon -->
+
+        <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow profile">
+          <li class="dropdown-header">
+            <h6>Admin</h6>
+            <span>Web Designer</span>
+          </li>
+          <li>
+            <hr class="dropdown-divider">
+          </li>
+
+          <li>
+            <a class="dropdown-item d-flex align-items-center" href="users-profile.html">
+              <i class="bi bi-person"></i>
+              <span>Hồ sơ của tôi</span>
+            </a>
+          </li>
+          <li>
+            <hr class="dropdown-divider">
+          </li>
+
+          <li>
+            <a class="dropdown-item d-flex align-items-center" href="users-profile.html">
+              <i class="bi bi-gear"></i>
+              <span>Cài đặt</span>
+            </a>
+          </li>
+          <li>
+            <hr class="dropdown-divider">
+          </li>
+
+          <li>
+            <a class="dropdown-item d-flex align-items-center" href="pages-faq.html">
+              <i class="bi bi-question-circle"></i>
+              <span>Trợ giúp</span>
+            </a>
+          </li>
+          <li>
+            <hr class="dropdown-divider">
+          </li>
+
+          <li>
+            <a class="dropdown-item d-flex align-items-center" href="#">
+              <i class="bi bi-box-arrow-right"></i>
+              <span>Đăng xuất</span>
+            </a>
+          </li>
+
+        </ul><!-- End Profile Dropdown Items -->
+      </li><!-- End Profile Nav -->
+
+    </ul>
+  </nav><!-- End Icons Navigation -->
+
+</header><!-- End Header -->
+
+<!-- ======= Sidebar ======= -->
+<aside id="sidebar" class="sidebar">
+
+  <ul class="sidebar-nav" id="sidebar-nav">
+
+    <li class="nav-item">
+      <a class="nav-link " href="index.html">
+        <i class="bi bi-grid"></i>
+        <span>Doanh thu & Lợi nhuận</span>
       </a>
-      <i class="bi bi-list toggle-sidebar-btn"></i>
-    </div><!-- End Logo -->
+    </li><!-- End Dashboard Nav -->
 
-    <div class="search-bar">
-      <form class="search-form d-flex align-items-center" method="POST" action="#">
-        <input type="text" name="query" placeholder="Search" title="Enter search keyword">
-        <button type="submit" title="Search"><i class="bi bi-search"></i></button>
-      </form>
-    </div><!-- End Search Bar -->
-
-    <nav class="header-nav ms-auto">
-      <ul class="d-flex align-items-center">
-
-        <li class="nav-item d-block d-lg-none">
-          <a class="nav-link nav-icon search-bar-toggle " href="#">
-            <i class="bi bi-search"></i>
+    <li class="nav-item">
+      <a class="nav-link collapsed" data-bs-target="#components-nav" data-bs-toggle="collapse" href="#">
+        <i class="bi bi-menu-button-wide"></i><span>Quản lý</span><i class="bi bi-chevron-down ms-auto"></i>
+      </a>
+      <ul id="components-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
+        <li>
+          <a href="QLDONHANG.html">
+            <i class="bi bi-cart"></i><span>Quản lý đơn hàng</span>
           </a>
-        </li><!-- End Search Icon-->
-
-        <div class="branch-selector">
-          <label for="branch">Chọn cơ sở:</label>
-          <select id="branch">
-              <option value="hanoi">Cơ sở Hà Nội</option>
-              <option value="hcm">Cơ sở TP. Hồ Chí Minh</option>
-              <option value="danang">Cơ sở Đà Nẵng</option>
-          </select>
-      </div>
-
-        <li class="nav-item dropdown">
-
-          <a class="nav-link nav-icon" href="#" data-bs-toggle="dropdown">
-            <i class="bi bi-bell"></i>
-            <span class="badge bg-primary badge-number">4</span>
-          </a><!-- End Notification Icon -->
-
-          <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow notifications">
-            <li class="dropdown-header">
-              Bạn có 4 thông báo mới
-              <a href="#"><span class="badge rounded-pill bg-primary p-2 ms-2">Xem tất cả</span></a>
-            </li>
-            <li>
-              <hr class="dropdown-divider">
-            </li>
-
-            <li class="notification-item">
-              <i class="bi bi-exclamation-circle text-warning"></i>
-              <div>
-                <h4>Cảnh báo đăng nhập</h4>
-                <p>Phát hiện tài khoản đăng nhập ở nơi khác</p>
-                <p>2 phút trước</p>
-              </div>
-            </li>
-
-            <li>
-              <hr class="dropdown-divider">
-            </li>
-
-            <li class="notification-item">
-              <i class="bi bi-x-circle text-danger"></i>
-              <div>
-                <h4>Đặt hàng không thành công</h4>
-                <p>Vui lòng điền đầy đủ thông tin đơn hàng</p>
-                <p>1 hr. ago</p>
-              </div>
-            </li>
-
-            <li>
-              <hr class="dropdown-divider">
-            </li>
-
-            <li class="notification-item">
-              <i class="bi bi-check-circle text-success"></i>
-              <div>
-                <h4>Thông báo 3</h4>
-                <p>Nội dung thông báo 3</p>
-                <p>2 hrs. ago</p>
-              </div>
-            </li>
-
-            <li>
-              <hr class="dropdown-divider">
-            </li>
-
-            <li class="notification-item">
-              <i class="bi bi-info-circle text-primary"></i>
-              <div>
-                <h4>Thông báo 4 </h4>
-                <p>Nội dung thông báo 4</p>
-                <p>4 hrs. ago</p>
-              </div>
-            </li>
-
-            <li>
-              <hr class="dropdown-divider">
-            </li>
-            <li class="dropdown-footer">
-              <a href="#">Hiển thị tất cả thông báo</a>
-            </li>
-
-          </ul><!-- End Notification Dropdown Items -->
-
-        </li><!-- End Notification Nav -->
-
-        <li class="nav-item dropdown">
-
-          <a class="nav-link nav-icon" href="#" data-bs-toggle="dropdown">
-            <i class="bi bi-chat-left-text"></i>
-            <span class="badge bg-success badge-number">3</span>
-          </a><!-- End Messages Icon -->
-
-          <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow messages">
-            <li class="dropdown-header">
-              Bạn có 3 tin nhắn mới
-              <a href="#"><span class="badge rounded-pill bg-primary p-2 ms-2">Xem tất cả</span></a>
-            </li>
-            <li>
-              <hr class="dropdown-divider">
-            </li>
-
-            <li class="message-item">
-              <a href="#">
-                <img src="assets/img/user1.png" alt="" class="rounded-circle">
-                <div>
-                  <h4>Vũ Tùng Dương</h4>
-                  <p>Thêm đơn hàng #2024245676</p>
-                  <p>Vừa xong</p>
-                </div>
-              </a>
-            </li>
-            <li>
-              <hr class="dropdown-divider">
-            </li>
-
-            <li class="message-item">
-              <a href="#">
-                <img src="assets/img/user2.jpg" alt="" class="rounded-circle">
-                <div>
-                  <h4>Trần Quốc Toàn</h4>
-                  <p>Thêm đơn hàng #202423445</p>
-                  <p>6 phút trước</p>
-                </div>
-              </a>
-            </li>
-            <li>
-              <hr class="dropdown-divider">
-            </li>
-
-            <li class="message-item">
-              <a href="#">
-                <img src="assets/img/user3.jpg" alt="" class="rounded-circle">
-                <div>
-                  <h4>Lê Võ Khôi Nguyên</h4>
-                  <p>Thêm đơn hàng #202423346</p>
-                  <p>8 phút trước</p>
-                </div>
-              </a>
-            </li>
-            <li>
-              <hr class="dropdown-divider">
-            </li>
-
-            <li class="dropdown-footer">
-              <a href="#">Hiển thị tất cả tin nhắn</a>
-            </li>
-
-          </ul><!-- End Messages Dropdown Items -->
-
-        </li><!-- End Messages Nav -->
-
-        <li class="nav-item dropdown pe-3">
-
-          <a class="nav-link nav-profile d-flex align-items-center pe-0" href="#" data-bs-toggle="dropdown">
-            <img src="assets/img/user1.png" alt="Profile" class="rounded-circle">
-            <span class="d-none d-md-block dropdown-toggle ps-2">Admin</span>
-          </a><!-- End Profile Image Icon -->
-
-          <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow profile">
-            <li class="dropdown-header">
-              <h6>Admin</h6>
-              <span>Web Designer</span>
-            </li>
-            <li>
-              <hr class="dropdown-divider">
-            </li>
-
-            <li>
-              <a class="dropdown-item d-flex align-items-center" href="users-profile.html">
-                <i class="bi bi-person"></i>
-                <span>Hồ sơ của tôi</span>
-              </a>
-            </li>
-            <li>
-              <hr class="dropdown-divider">
-            </li>
-
-            <li>
-              <a class="dropdown-item d-flex align-items-center" href="users-profile.html">
-                <i class="bi bi-gear"></i>
-                <span>Cài đặt</span>
-              </a>
-            </li>
-            <li>
-              <hr class="dropdown-divider">
-            </li>
-
-            <li>
-              <a class="dropdown-item d-flex align-items-center" href="pages-faq.html">
-                <i class="bi bi-question-circle"></i>
-                <span>Trợ giúp</span>
-              </a>
-            </li>
-            <li>
-              <hr class="dropdown-divider">
-            </li>
-
-            <li>
-              <a class="dropdown-item d-flex align-items-center" href="#">
-                <i class="bi bi-box-arrow-right"></i>
-                <span>Đăng xuất</span>
-              </a>
-            </li>
-
-          </ul><!-- End Profile Dropdown Items -->
-        </li><!-- End Profile Nav -->
-
+        </li>
+        <li>
+          <a href="QLKHACHHANG.html">
+            <i class="bi bi-person"></i><span>Quản lý khách hàng</span>
+          </a>
+        </li>
+        <li>
+          <a href="QLSANPHAMTK.html">
+            <i class="bi bi-bag"></i><span>Quản lý sản phẩm & tồn kho</span>
+          </a>
+        </li>
+        <li>
+          <a href="QLNHANVIEN.html">
+            <i class="bi bi-bag"></i><span>Quản lý nhân viên</span>
+          </a>
+        </li>
+        
       </ul>
-    </nav><!-- End Icons Navigation -->
+    </li><!-- End Components Nav -->
 
-  </header><!-- End Header -->
-
-  <!-- ======= Sidebar ======= -->
-  <aside id="sidebar" class="sidebar">
-
-    <ul class="sidebar-nav" id="sidebar-nav">
-
-      <li class="nav-item">
-        <a class="nav-link " href="index.html">
-          <i class="bi bi-grid"></i>
-          <span>Doanh thu & Lợi nhuận</span>
-        </a>
-      </li><!-- End Dashboard Nav -->
-
-      <li class="nav-item">
-        <a class="nav-link collapsed" data-bs-target="#components-nav" data-bs-toggle="collapse" href="#">
-          <i class="bi bi-menu-button-wide"></i><span>Quản lý</span><i class="bi bi-chevron-down ms-auto"></i>
-        </a>
-        <ul id="components-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
-          <li>
-            <a href="components-alerts.html">
-              <i class="bi bi-cart"></i><span>Quản lý đơn hàng</span>
-            </a>
-          </li>
-          <li>
-            <a href="components-accordion.html">
-              <i class="bi bi-person"></i><span>Quản lý khách hàng</span>
-            </a>
-          </li>
-          <li>
-            <a href="components-badges.html">
-              <i class="bi bi-bag"></i><span>Quản lý sản phẩm & tồn kho</span>
-            </a>
-          </li>
-          <li>
-            <a href="components-breadcrumbs.html">
-              <i class="bi bi-bag"></i><span>Quản lý nhân viên</span>
-            </a>
-          </li>
-          
-        </ul>
-      </li><!-- End Components Nav -->
-<!--
-      <li class="nav-item">
+<!--      <li class="nav-item">
         <a class="nav-link collapsed" data-bs-target="#forms-nav" data-bs-toggle="collapse" href="#">
           <i class="bi bi-journal-text"></i><span>Forms</span><i class="bi bi-chevron-down ms-auto"></i>
         </a>
@@ -346,8 +347,8 @@
           </li>
         </ul>
       </li><!-- End Forms Nav -->
-<!--
-      <li class="nav-item">
+
+<!--      <li class="nav-item">
         <a class="nav-link collapsed" data-bs-target="#tables-nav" data-bs-toggle="collapse" href="#">
           <i class="bi bi-layout-text-window-reverse"></i><span>Tables</span><i class="bi bi-chevron-down ms-auto"></i>
         </a>
@@ -363,7 +364,7 @@
             </a>
           </li>
         </ul>
-      </li><!-- End Tables Nav -->
+      </li>End Tables Nav-->
 
       <li class="nav-item">
         <a class="nav-link collapsed" data-bs-target="#charts-nav" data-bs-toggle="collapse" href="#">
@@ -387,8 +388,8 @@
           </li>
         </ul>
       </li><!-- End Charts Nav -->
-<!---
-      <li class="nav-item">
+
+<!--      <li class="nav-item">
         <a class="nav-link collapsed" data-bs-target="#icons-nav" data-bs-toggle="collapse" href="#">
           <i class="bi bi-gem"></i><span>Icons</span><i class="bi bi-chevron-down ms-auto"></i>
         </a>
@@ -469,21 +470,22 @@
   <main id="main" class="main">
 
     <div class="pagetitle">
-      <h1>Doanh thu & Lợi nhuận</h1>
+      <h1>Alerts</h1>
       <nav>
         <ol class="breadcrumb">
-          <li class="breadcrumb-item"><a href="index.html">Trang chủ</a></li>
-          <li class="breadcrumb-item active">Doanh thu & Lợi nhuận</li>
+          <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+          <li class="breadcrumb-item">Components</li>
+          <li class="breadcrumb-item active">Alerts</li>
         </ol>
       </nav>
-    </div>
+    </div><!-- End Page Title -->
 
     <!DOCTYPE html>
 <html lang="vi">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Quản Lý Nhân Viên</title>
+    <title>Quản Lý Đơn Hàng</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -513,9 +515,17 @@
             text-align: center;
         }
         th {
-            background-color: #28a745;
+            background-color: #ffc107;
             color: white;
         }
+        .status {
+            padding: 5px 10px;
+            border-radius: 5px;
+            font-weight: bold;
+        }
+        .pending { background-color: #ffeb3b; }
+        .completed { background-color: #4caf50; color: white; }
+        .cancelled { background-color: #f44336; color: white; }
         .btn {
             padding: 5px 10px;
             margin: 2px;
@@ -523,52 +533,56 @@
             border-radius: 5px;
             cursor: pointer;
         }
-        .btn-add { background-color: #007bff; color: white; }
-        .btn-edit { background-color: #ffc107; color: white; }
+        .btn-add { background-color: #28a745; color: white; }
+        .btn-edit { background-color: #007bff; color: white; }
         .btn-delete { background-color: #dc3545; color: white; }
     </style>
 </head>
 <body>
     <div class="container">
-        <h2>Quản Lý Nhân Viên</h2>
-        <button class="btn btn-add">Thêm Nhân Viên</button>
+        <h2>Quản Lý Đơn Hàng</h2>
+        <button class="btn btn-add">Thêm Đơn Hàng</button>
         <table>
             <tr>
-                <th>ID</th>
-                <th>Tên Nhân Viên</th>
-                <th>Chức Vụ</th>
-                <th>Email</th>
-                <th>Số Điện Thoại</th>
+                <th>Mã Đơn</th>
+                <th>Khách Hàng</th>
+                <th>Sản Phẩm</th>
+                <th>Số Lượng</th>
+                <th>Tổng Tiền</th>
+                <th>Trạng Thái</th>
                 <th>Hành Động</th>
             </tr>
             <tr>
-                <td>NV001</td>
+                <td>DH001</td>
                 <td>Nguyễn Văn A</td>
-                <td>Quản Lý</td>
-                <td>nguyenvana@example.com</td>
-                <td>0123456789</td>
+                <td>Bánh Mì Thịt</td>
+                <td>2</td>
+                <td>50.000đ</td>
+                <td><span class="status pending">Chờ xử lý</span></td>
                 <td>
                     <button class="btn btn-edit">Sửa</button>
                     <button class="btn btn-delete">Xóa</button>
                 </td>
             </tr>
             <tr>
-                <td>NV002</td>
+                <td>DH002</td>
                 <td>Trần Thị B</td>
-                <td>Nhân Viên Bán Hàng</td>
-                <td>tranthib@example.com</td>
-                <td>0987654321</td>
+                <td>Bánh Mì Chả</td>
+                <td>1</td>
+                <td>25.000đ</td>
+                <td><span class="status completed">Hoàn thành</span></td>
                 <td>
                     <button class="btn btn-edit">Sửa</button>
                     <button class="btn btn-delete">Xóa</button>
                 </td>
             </tr>
             <tr>
-                <td>NV003</td>
+                <td>DH003</td>
                 <td>Lê Văn C</td>
-                <td>Nhân Viên Giao Hàng</td>
-                <td>levanc@example.com</td>
-                <td>0345678901</td>
+                <td>Bánh Mì Trứng</td>
+                <td>3</td>
+                <td>75.000đ</td>
+                <td><span class="status cancelled">Đã hủy</span></td>
                 <td>
                     <button class="btn btn-edit">Sửa</button>
                     <button class="btn btn-delete">Xóa</button>
